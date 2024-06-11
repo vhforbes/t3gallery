@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { db } from "~/server/db";
 
-export default function HomePage() {
+export default async function HomePage() {
   const mockImgUrls = [
     "https://utfs.io/f/aa65dff5-e349-4f07-9ad9-557651d00f3b-6i8wda.36.02.jpeg",
     "https://utfs.io/f/e582717e-14ac-40a7-a6e5-a3be186471da-j9udsk.png",
@@ -12,6 +13,10 @@ export default function HomePage() {
     id: index + 1,
     url,
   }));
+
+  const posts = await db.query.posts.findMany();
+
+  console.log(posts);
 
   return (
     <main className="">
