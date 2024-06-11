@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
 import { db } from "~/server/db";
+
+export const dynamic = "force-dynamic"; // Changes reflect on every refresh
 
 export default async function HomePage() {
   const mockImgUrls = [
@@ -20,6 +20,9 @@ export default async function HomePage() {
 
   return (
     <main className="">
+      {posts.map((post) => (
+        <div>{post.name}</div>
+      ))}
       <div className="flex flex-wrap gap-4">
         {[...mockImages, ...mockImages, ...mockImages].map((image, index) => (
           <div key={image.id + index} className="w-48">
