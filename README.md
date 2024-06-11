@@ -4,7 +4,7 @@ This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3
 
 ## From tutorial:
 
-- [Tutorial video ](https://www.youtube.com/watch?v=d5x0JCZbAJs)
+- [Tutorial video ](https://youtu.be/d5x0JCZbAJs?si=lsujHeHUEFmtryDJ&t=1189)
 
 ## What's next? How do I make an app with this?
 
